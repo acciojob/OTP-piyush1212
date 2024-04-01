@@ -45,6 +45,11 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
+            outline: none; /* Remove default focus outline */
+        }
+
+        .code:focus {
+            border-color: blue; /* Add custom focus style */
         }
 
         input[type="number"]::-webkit-inner-spin-button,
@@ -60,15 +65,15 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="verification_heading">Verify Your Account</h1>
+        <h1 id="verification_heading">OTP Verification</h1>
         <p id="verification_subtext">Please enter the OTP sent to your phone number.</p>
         <div class="code-container">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
-            <input type="number" class="code" maxlength="1" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
+            <input type="number" class="code" maxlength="1" data-cy="otp-input" oninput="nextInput(this)" onkeydown="previousInput(event)">
         </div>
     </div>
 
